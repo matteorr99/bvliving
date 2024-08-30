@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BellaVista Living - Guest Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BellaVista Living - Guest Management</h1>
+
+    <!-- Form for guest check-in -->
+    <form id="guest-form">
+      <div class="form-group">
+        <input type="text" id="first-name" placeholder="First Name" required>
+        <input type="text" id="last-name" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <input type="date" id="checkout-date" required>
+        <select id="apartment" required>
+          <option value="" disabled selected>Select Apartment</option>
+          <option value="Apartment 1">Apartment 1</option>
+          <option value="Apartment 2">Apartment 2</option>
+          <option value="Apartment 3">Apartment 3</option>
+          <option value="Apartment 4">Apartment 4</option>
+          <option value="Poggio Imperiale">Poggio Imperiale</option>
+        </select>
+      </div>
+      <button type="button" id="checkin-button" class="checkin-button">CHECK-IN</button>
+    </form>
+
+    <!-- Search and filter section -->
+    <div class="search-filter">
+      <input type="text" id="search-name" placeholder="Search by Name">
+      <select id="filter-apartment">
+        <option value="">All Apartments</option>
+        <option value="Apartment 1">Apartment 1</option>
+        <option value="Apartment 2">Apartment 2</option>
+        <option value="Apartment 3">Apartment 3</option>
+        <option value="Apartment 4">Apartment 4</option>
+        <option value="Poggio Imperiale">Poggio Imperiale</option>
+      </select>
+      <button id="filter-button" class="filter-button">FILTER</button>
+    </div>
+
+    <!-- Current guests section -->
+    <h2>Current Guests</h2>
+    <table id="guests-list">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Check-in</th>
+          <th>Check-out</th>
+          <th>Apartment</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Guests will be listed here -->
+      </tbody>
+    </table>
+
+    <!-- Archive section -->
+    <h2>Guest Archive</h2>
+    <table id="archive-list">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Check-in</th>
+          <th>Check-out</th>
+          <th>Apartment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Archived guests will be listed here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
